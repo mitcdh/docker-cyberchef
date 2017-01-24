@@ -1,0 +1,11 @@
+:2015
+gzip
+log stdout
+errors stderr
+root /www/public
+git {
+	repo https://github.com/gchq/CyberChef.git
+	path ../cyberchef-src
+	interval 86400
+	then /bin/sh /www/cyberchef-install.sh
+}
